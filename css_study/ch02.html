@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ctrl + shift + c -> 콘솔 */
+        /* 
+        border 높이 너비 3  3 padding 높이 너비 20 20 
+        box-sizing - 해당 위치까지 컨텐츠 영역포함 
+
+        순서(시계방향)
+        top, right, bottom, left  -> 위 오른쪽 아래 왼쪽 
+        top - 위아래오왼쪽
+        top, right - 위아래, 오왼쪽
+        top, righ,t bottom - 위, 오왼쪽, 아래
+
+        border는 속성값으로 값 주입
+        
+        */
+        .box {
+            box-sizing: border-box;
+            margin: 40px;
+            border: 3px solid #222;
+            /* border-width: 1px 2px 3px 4px;
+            border-top: 5px solid red; */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+           
+            padding: 20px 10px;
+            padding-left: 15px;
+            /* 컨텐츠 영역 */
+            width: 100px;
+            height: 100px;
+            background-color: #aaa;
+        }
+        
+        /* inline-block는 블록처럼 취급 
+           block */
+        .text {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: #222;
+            color: white;
+        }
+
+        .box1 {
+            /* flex요소 박스요소 */
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            background-color: #aaa;
+        }
+
+        .box2 {
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">테스트</div>
+    <input type="text">
+    <span class="text">일반 텍스트</span>
+
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+
+    
+</body>
+</html>

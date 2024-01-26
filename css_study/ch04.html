@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @import url(); 폰트추가 */
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .main-box {
+            position: relative;
+
+            box-sizing: border-box;
+            margin: 300px auto;
+            border: 1px solid #aaa;
+            width: 482px;
+            height: 300px;
+        }
+
+        .sub-box1 {
+            border: 1px solid rgba(red, green, blue, alpha);
+            width: 160px;
+            height: 40px;
+            
+        }
+
+        .sub-box2{
+            position: absolute;
+            border: 1px solid black;
+            width: 160px;
+            height: 40px;
+            top: 0px;
+            right: 0px;
+        }   
+        
+
+        .sub-box3 {
+            position: absolute;
+            border: 1px solid black;
+            width: 160px;
+            height: 40px;
+            top: 0px;
+            left: 160px;
+        }
+        .sub-box4 {
+            position: absolute;
+            border: 1px solid #03c75a;
+            width: 246px;
+            height: 200px;
+            z-index: -1px;
+            top: -12px;
+            right: -12px;
+            border-radius: 25px;
+            background-color: white;
+            
+
+        }
+        .x-box{
+            /* transform: translate(-50%, -50%) 텍스트 상자에서 구동  */
+            transform: translate(-50%, -50%); 
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="main-box">
+        <div class="box sub-box1">
+            <label for="">아이디</label>
+        </div>
+        
+
+
+
+        <div class="box sub-box2"></div>
+        <div class="box sub-box3"></div>
+        <div class="subbox sub-box4">
+            <div class="x-box">^-----^</div>
+        </div>
+        
+    </div>
+</body>
+</html>
