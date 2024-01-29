@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 클래스 + 태그 우선순위 2 */
+        .box1 p {
+            background-color: red;
+        }
+        /* 클래스 + 태그 + 태그 우선순위 1 */
+        .box2 main p {
+            background-color: blue;
+        }
+        /* 태그 우선순위 3 */
+        p {
+            background-color: brown;
+        }
+        /* 자식 선택자 */
+        .box3 > p {
+            background-color: aqua;
+        }
+        /* 인접형제 선택자 자식의 바로 밑 */
+        .box3 + p {
+
+        }
+        /* 형제 선택자 자식의 모든 손자들 */
+        .box3 ~ p {
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>박스1-1</p>
+        <h1>박스1-2</h1>
+        <main>
+            <p>박스1-3</p>
+        </main>
+
+    </div>
+    <div class="box2">
+        <p>박스2-1</p>
+        <main>
+            <p>박스2-2</p>
+        </main>
+    </div>
+
+    <div class="box3">
+        <!-- 자식 -->
+        <p>박스3-1</p>
+        <main>
+            <!-- 손자 -->
+            <p>박스3-2</p>
+        </main>
+    </div>
+</body>
+</html>

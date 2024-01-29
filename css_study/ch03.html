@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        /* 포지션은 상위에 기준(기본 : html이 기준) */
         .main-box {
             margin-top: 400px;
             position: relative;
@@ -13,34 +13,34 @@
             width: 800px;
             height: 1200px;
         }
-
+       
         .box {
             border: 1px solid red;
             width: 100px;
             height: 100px; 
         }
-        /* 처음 위치에서 이동 */
+        /* relative 요소의 위치를 문서 흐름에서의 기본 위치에 상대적으로 정의합니다. 자기위치기준 */
         .sub-box4 {
             position: relative;
             right: 10px;
             bottom: 10px;
         }
 
-        /* 마진안에서 고정 */
+        /* absolute  문서 흐름에서 빠져나와 페이지 상의 특정 위치에 절대적으로 위치시킵니다. 부모기준*/
         .sub-box3 {
             position: absolute;
             right: 10px;
             bottom: 10px;
         }
 
-        /* 완전 고정 */
+        /* fixed 요소를 뷰포트에 고정시켜 문서 스크롤에 상관없이 항상 같은 위치에 유지시킵니다 */
         .sub-box2 {
             position: fixed;
             left: 0px;
             top: 0px;
         }
 
-        /* 마진안에서 움직임 */
+        /* sticky 요소가 스크롤되는 동안 일정 위치에 고정됩니다. */
         .sub-box1 {
             position: sticky;
             top: 200px;

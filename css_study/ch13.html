@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            /* flex 용도(기본은 블록)
+             1. 우측정렬 자간없이*/
+            display: flex;
+            flex-direction: column-reverse;
+            /* 2. 좌우 정렬 
+                justify-content : flex-start(기본값), center, flex-end
+                space-around, space-between (끝부터 등분) 
+                주축
+            */
+            justify-content: flex-start;
+            /* 3. 높이 가운데 정렬 */
+            align-items: flex-end;
+            /* 4. 자동 요소 줄 바꿈 */
+            flex-wrap: wrap;
+            border: 1px solid #000;
+            height: 400px;
+        }
+
+        .box1 {
+            border: 1px solid #000;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      
+    </div>
+</body>
+</html>
