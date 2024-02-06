@@ -17,7 +17,7 @@ console.log(numbers1);
 console.log(numbers1[3]);
 
 
-for(let i = 0; i < 10; i++) {
+for(let i = 0; i < numbers1.length; i++) {
     console.log(numbers1[i]);
 }
 

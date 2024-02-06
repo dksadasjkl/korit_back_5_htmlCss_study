@@ -1,25 +1,25 @@
 let index = 1;
-const submitButton = document.querySelector(".append-button");
-submitButton.onclick = () => {
-    const inputs = document.querySelectorAll(".inputs");
+
+const appendButton = document.querySelector(".append-button");
+
+appendButton.onclick = () => {
+    const textInputs = document.querySelectorAll(".text-inputs");
     const dataTableBody = document.querySelector(".data-table-body");
-   
-    
-    dataTableBody.innerHTML += 
-    `<tr>
-    <td>${index}
-    <td>${input.value[0]}</td>
-    <td>${input.value[1]}</td>
-    <td>${input.value[2]}</td>
-    </tr>
-    `;
 
-    index++;
-    
-    for(let input of textInputs) {
-        input.value = "";
-    }
-   
-    
+    dataTableBody.innerHTML += `
+        <tr>
+            <td>${index}</td>
+            <td>${textInputs[0].value}</td>
+            <td>${textInputs[1].value}</td>
+            <td>${textInputs[2].value}</td>
+        </tr>
+        `;
 
+        index++;
+
+        for (let input of textInputs) {
+            input.value = "";
+        }
+
+    
 }

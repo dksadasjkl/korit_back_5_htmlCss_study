@@ -1,4 +1,6 @@
 .side-bar-layout {
+    
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -9,7 +11,17 @@
 
 }
 
+.side-bar-show {
+    /* opacity 투명 0 */
+    /* opacity: 1; */
+    display: block;
+}
+
 .side-bar-container {
+    position: absolute;
+    left: -320px;
+    top: 0px;
+    transition: left 0.5s ease-in-out;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     width: 320px;
@@ -17,6 +29,10 @@
     background-color: white;
     box-shadow: 1px 0px 10px #00000011; 
     
+}
+
+.side-bar-container-show {
+    left: 0px;
 }
 
 .side-bar-header {
