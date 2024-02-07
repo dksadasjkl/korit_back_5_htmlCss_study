@@ -46,6 +46,8 @@
 }
 
 .todo-input {
+    text-align: center;/* 좌우센터 */
+    vertical-align: middle; /* 상하센터 */
     outline: none;
     border: 1px solid #dbdbdb;
     padding: 10px;
