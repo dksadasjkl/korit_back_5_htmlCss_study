@@ -19,3 +19,18 @@ function getInputList() {
     }
 
 }
+
+function handleRemoveClick(id) {
+    let selected = confirm("정말로 삭제하시겠습니까??????????");
+    if(!selected) {
+        return;
+    }
+
+    let inputListJson = localStorage.getItem("inputList");
+    let inputList = inputListJson !== null ? JSON.parse(inputListJson) : new Array();
+    const newinputList = inputList.filter(id => id.id !== id);
+
+    localStorage.setItem("inputList", JSON.stringify(inputList));
+    getInputList();
+
+}

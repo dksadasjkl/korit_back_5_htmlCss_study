@@ -1,6 +1,4 @@
 
-
-
 function addInput() {
     const inputText = document.querySelector(".input-text");
     window.onkeydown = (e) => {
@@ -39,11 +37,13 @@ function handleEditModalOpen(id) {
     let inputList = inputListJson !== null ? JSON.parse(inputListJson) : new Array();
     
     
-    let findId = inputList.filter(id => id === id)[0];
+    let findId = inputList.filter(sid => sid.id === id)[0];
     
-    inputList.value = findId.content;
+    inputText.value = findId.content;
     
     editButton.onclick = () => handleEditSubmit(id);
+
+    
 
 } 
 
@@ -51,10 +51,15 @@ function handleEditSubmit(id) {
 
     let inputListJson = localStorage.getItem("inputList");
     let inputList = inputListJson !== null ? JSON.parse(inputListJson) : new Array();
-    
+    let lastIdexListId = inputList.length === 0 ? 0 : inputList[inputList.length - 1].id;
 
     let findIndex = -1; 
 
+    let dataObj = {
+        id: lastIdexListId + 1,
+        content: inputText.value
+    }
+    
     for (let i = 0; i < inputList.length; i++) {
         if(inputList[i].id === id) {
             findIndex = i;
@@ -66,6 +71,8 @@ function handleEditSubmit(id) {
         alert("오류");
         return;
     }
+    
+
 
     inputList[findIndex].content = document.querySelector(".input-text").value;
 
