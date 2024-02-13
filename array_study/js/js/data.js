@@ -50,7 +50,7 @@ window.onload = () => {
                 id: lastId + 1,
                 content: inputValue
             }
-
+            
             fetch("http://localhost:8080/data_array/data/addition", {
                 method: "POST",
                 mode: "cors",
